@@ -1,0 +1,112 @@
+{
+  "decide_now": {
+    "expected_value_eur": 899.9999999999999,
+    "action": "Buy 500 MWh"
+  },
+  "wait_for_weather_report": {
+    "expected_value_eur": 1875.0,
+    "policy": [
+      {
+        "observed_states": [
+          "Cold"
+        ],
+        "action": "Buy 500 MWh"
+      },
+      {
+        "observed_states": [
+          "Mild"
+        ],
+        "action": "Sell 500 MWh"
+      },
+      {
+        "observed_states": [
+          "Normal"
+        ],
+        "action": "Buy 500 MWh"
+      }
+    ]
+  },
+  "value_of_weather_report_eur": 975.0000000000001,
+  "solver_solutions": {
+    "decide_now": {
+      "optimal_decisions": [
+        {
+          "parent_states": [],
+          "decision_id": "a655c425-f3a5-526f-85fd-9de3c295f9ea",
+          "state": {
+            "id": "16248559-a6c6-5f0d-bfd5-8ebbf22a971c",
+            "name": "Buy 500 MWh",
+            "decision_id": "504cc9c1-820e-518f-8d30-d4fce37b5bf5",
+            "utility": 0.0
+          }
+        }
+      ],
+      "mean": 899.9999999999999
+    },
+    "wait_for_weather_report": {
+      "optimal_decisions": [
+        {
+          "parent_states": [
+            {
+              "parent_id": "4a37a822-31c1-5240-bb4a-db510448997d",
+              "state": {
+                "id": "363e532b-c72d-5726-81c2-2a04b8a5177c",
+                "name": "Mild",
+                "uncertainty_id": "43b94c3f-8486-5c56-9e84-6a594cc38abe",
+                "utility": 0.0
+              }
+            }
+          ],
+          "decision_id": "a655c425-f3a5-526f-85fd-9de3c295f9ea",
+          "state": {
+            "id": "aee672fc-2604-5b4b-a8b5-731bca02ac42",
+            "name": "Sell 500 MWh",
+            "decision_id": "504cc9c1-820e-518f-8d30-d4fce37b5bf5",
+            "utility": 0.0
+          }
+        },
+        {
+          "parent_states": [
+            {
+              "parent_id": "4a37a822-31c1-5240-bb4a-db510448997d",
+              "state": {
+                "id": "5005cdcb-dc15-504a-8cc5-dc4eb856316a",
+                "name": "Normal",
+                "uncertainty_id": "43b94c3f-8486-5c56-9e84-6a594cc38abe",
+                "utility": 0.0
+              }
+            }
+          ],
+          "decision_id": "a655c425-f3a5-526f-85fd-9de3c295f9ea",
+          "state": {
+            "id": "16248559-a6c6-5f0d-bfd5-8ebbf22a971c",
+            "name": "Buy 500 MWh",
+            "decision_id": "504cc9c1-820e-518f-8d30-d4fce37b5bf5",
+            "utility": 0.0
+          }
+        },
+        {
+          "parent_states": [
+            {
+              "parent_id": "4a37a822-31c1-5240-bb4a-db510448997d",
+              "state": {
+                "id": "90f2ecd5-42c2-5a82-91f7-c4b71d386aab",
+                "name": "Cold",
+                "uncertainty_id": "43b94c3f-8486-5c56-9e84-6a594cc38abe",
+                "utility": 0.0
+              }
+            }
+          ],
+          "decision_id": "a655c425-f3a5-526f-85fd-9de3c295f9ea",
+          "state": {
+            "id": "16248559-a6c6-5f0d-bfd5-8ebbf22a971c",
+            "name": "Buy 500 MWh",
+            "decision_id": "504cc9c1-820e-518f-8d30-d4fce37b5bf5",
+            "utility": 0.0
+          }
+        }
+      ],
+      "mean": 1875.0
+    }
+  }
+}
